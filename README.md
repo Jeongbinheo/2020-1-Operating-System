@@ -24,4 +24,57 @@ Virtual Box에 사용한 Linux Image Spec
 ![structure](https://blogfiles.pstatic.net/MjAyMDExMDdfMjc4/MDAxNjA0NzMwOTk0MjQ1.cDh7wtLKLP9dJDAmDWcseTm4z2tg4_PQDqIOw1Ujg1kg.54XIzhxfb5oHTETRa2jTYc6qUdxTYHNdDS2UK75Yv14g.PNG.hdh988/VirtualBoxImage.png?type=w2)
 ##
 
-## 2. 
+## 2. Matrix-Multiplexing
+
+- mat_init 함수: 3개의 행렬을 생성하고 초기화 하는 함수 (main.c에 정의되어 있음)
+ mat_init에는 A,B,C  세 개의 행렬을 이중 포인터 배열을 이용해 생성하고 
+ 생성된 A,B 행렬은 random number를 행렬의 배열에 채우고 
+ C 행렬은 계산 결과가 들어가야 하므로 배열의 내부는 비워둔다.
+
+  간단히 코드를 살펴보면 다음과 같다.
+``` C
+void mat_init(int **(*p_a),int **(*p_b), int**(*p_c),int len)
+{
+		int **a;
+		int **b;
+		int **c;
+
+		a =(int**) malloc(len * sizeof(int*));
+		b =(int**) malloc(len * sizeof(int*));
+		c =(int**) malloc(len * sizeof(int*));
+	 //len은 main 함수의 agrv로 입력하는 값 (행렬의 n x n에서 n을 의미)
+	 //len의 수 만큼 배열 포인터(int*)를 메모리에 할당함 
+	 //이후 이중 배열 포인터로 자료형 캐스팅해줌 (malloc은 void type을 반환해서) 
+	  
+	for(int i = 0; i<len; i++){
+		a[i] = (int*)malloc(len * sizeof(int*));
+		b[i] = (int*)malloc(len * sizeof(int*));
+		c[i] = (int*)malloc(len * sizeof(int*));
+	} 
+	  //for 문을 통해 이중 배열을 완전하게 만드는 과정
+```
+
+ <br/>
+
+- mat_mul 함수 : 행렬의 계산 기능을 담당하는 함수
+
+  이중 배열 계산은 많은 코딩 수업에서 기초로 다루기 때문에 간단히 코드만으로 
+  이해 하고 넘어갈 것!
+ 
+  ``` c
+  int mat_mul(int** src1, int** src2, int** dst, int len)
+  {
+		int i,j,k;
+		int result;
+
+		for (i = 0; i<len; i++){ //i(row)
+			for(j = 0; j<len; j++){ //j(column)
+					result = 0;
+				for(k = 0; k<len; k++){
+						result += src1[i][k] * src2[k][j];
+				}
+			}
+			dst[i][j] = result;
+	}
+  }
+  ```

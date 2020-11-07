@@ -129,5 +129,5 @@ void mat_init(int **(*p_a),int **(*p_b), int**(*p_c),int len)
 ## 4.  발표 동영상 링크
 
 프로젝트 코드 및 시뮬레이션 과정을 영상으로 남기는 추가과제로 Youtube 링크를 통해 시청가능합니다.
-<iframe width="640" height="360" src="https://youtu.be/-yNb5eh-dnc"  
- frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+ <iframe width="640" height="360" src="https://youtu.be/-yNb5eh-dnc"  
+  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

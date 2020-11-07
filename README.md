@@ -82,6 +82,7 @@ void mat_init(int **(*p_a),int **(*p_b), int**(*p_c),int len)
 ## 3. Linux System Programming
  
  상위 2개의 함수들은 본인이 만든 mat_mul_thread3 함수를 실행시키면동작하는 함수들로 thread단위로 행렬 연산을 수행하고
+ 
  thread 단위로 수행한 내용을 한번에 합치는 기능을 수행함.
  
 - ### thread 생성 함수

@@ -16,7 +16,7 @@ Multi-Core Computer에 최적화된 다중 Matrix Multiplexing을 위한 Linux S
  4. [발표_동영상_링크](README.md#발표_동영상_링크)
 
 ##
-## 1.  Virtual_Box_Spec
+## 1.Virtual_Box_Spec
 Virtual Box에 사용한 Linux Image Spec 
 : Octa-Core Processor
 <br/>
@@ -24,7 +24,7 @@ Virtual Box에 사용한 Linux Image Spec
 ![structure](https://blogfiles.pstatic.net/MjAyMDExMDdfMjc4/MDAxNjA0NzMwOTk0MjQ1.cDh7wtLKLP9dJDAmDWcseTm4z2tg4_PQDqIOw1Ujg1kg.54XIzhxfb5oHTETRa2jTYc6qUdxTYHNdDS2UK75Yv14g.PNG.hdh988/VirtualBoxImage.png?type=w2)
 ##
 
-## 2. Matrix-Multiplexing
+## 2.Matrix-Multiplexing
 
 - mat_init 함수: 3개의 행렬을 생성하고 초기화 하는 함수 (main.c에 정의되어 있음)
  mat_init에는 A,B,C  세 개의 행렬을 이중 포인터 배열을 이용해 생성하고 

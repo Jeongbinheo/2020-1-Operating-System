@@ -20,6 +20,7 @@ Multi-Core Computer에 최적화된 다중 Matrix Multiplexing을 위한 Linux S
 Virtual Box에 사용한 Linux Image Spec 
 : Octa-Core Processor
 <br/>
+
 ![structure](https://blogfiles.pstatic.net/MjAyMDExMDdfMjc4/MDAxNjA0NzMwOTk0MjQ1.cDh7wtLKLP9dJDAmDWcseTm4z2tg4_PQDqIOw1Ujg1kg.54XIzhxfb5oHTETRa2jTYc6qUdxTYHNdDS2UK75Yv14g.PNG.hdh988/VirtualBoxImage.png?type=w2)
 ##
 

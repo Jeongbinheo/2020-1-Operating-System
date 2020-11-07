@@ -78,12 +78,9 @@ void mat_init(int **(*p_a),int **(*p_b), int**(*p_c),int len)
 	}
   }
   ```
-
 ## 3. Linux System Programming
  
- 상위 2개의 함수들은 본인이 만든 mat_mul_thread3 함수를 실행시키면동작하는 함수들로 thread단위로 행렬 연산을 수행하고
- 
- thread 단위로 수행한 내용을 한번에 합치는 기능을 수행함.
+ 상위 2개의 함수들은 본인이 만든 mat_mul_thread3 함수를 실행시키면동작하는 함수들로 thread단위로 행렬 연산을 수행하고 thread 단위로 수행한 내용을 한번에 합치는 기능을 수행함.
  
 - ### thread 생성 함수
 ```c     
@@ -95,3 +92,42 @@ void mat_init(int **(*p_a),int **(*p_b), int**(*p_c),int len)
    **→ void(*start_rotine)(void*) : thread를 만들고 실행하는 시점.**
   
    **→ 해당 프로젝트에는 mat_mul_th_kernel3이 들어가고,  thread별로 행렬 계산을 수행함.**
+   ```C
+   Example)
+   res = pthread_create(a_thread+i, NULL, mat_mul_th_kernel3, (void*)arg);
+  ```
+
+- ### thread에서 수행한 결과를 합치는 함수 
+   pthread_join : thread들이 terminated 될 때까지 기다려주는 함수.
+   ```c
+  pthread_join 의 사용법 (Linux manual 참조)
+      #include <pthread.h>
+       int pthread_join(pthread_t *thread, void** retval);
+  ```
+  
+     **→ 프로젝트에서 사용되는 방식**
+   ```c
+ 	for (i = 0; i<num_thread; i++){ //i(row)
+			res = pthread_join(a_thread[i], &thread_result);
+				if (res!=0){
+					perror("Thread creation failed");
+					exit(EXIT_FAILURE);
+				}
+		}
+  ```		
+
+ 
+- ### Octa-core에 최적화 시키기 위한 전략
+  num_thread와 count라는 변수를 추가해서 기존에는
+  행의 갯수 만큼 thread를 생성했지만, 바뀐 전략에는 num_thread 갯수를 직접 받아와 내가 원하는 수의 thread 만큼 생성하여 processor 갯수에 최적화된 연산이 가능해짐.
+
+
+
+
+    발표 동영상을 참조하면 수월하게 이해가 가능함.
+
+## 4.  발표 동영상 링크
+
+프로젝트 코드 및 시뮬레이션 과정을 영상으로 남기는 추가과제로 Youtube 링크를 통해 시청가능합니다.
+<iframe width="640" height="360" src="https://youtu.be/-yNb5eh-dnc"  
+ frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

@@ -34,7 +34,6 @@ typedef struct{
 
 }matmul_arg_t;
 
-// int mat_mul_th_kernel(int i, int** src1, int** src2, int** dst, int len)
 void* mat_mul_th_kernel(void *arg)
 {
 
@@ -128,8 +127,6 @@ int mat_mul_thread3(int** src1, int** src2, int** dst, int len, int num_thread)
 			perror("Thread creation failed");
 			exit(EXIT_FAILURE);
 		}
-
-
 	}
 	
 	for (i = 0; i<num_thread; i++){ //i(row)
@@ -139,18 +136,9 @@ int mat_mul_thread3(int** src1, int** src2, int** dst, int len, int num_thread)
 			exit(EXIT_FAILURE);
 		}
 	}		
-
 	return 0;	
 }
 
-
-/* int mat_inv(int** src, int** dst, int len)
-{
-
-
-
-
-}
 
 int mat_add(int** src1, int** src2, int** dst, int len)
 {
@@ -163,13 +151,13 @@ int mat_add(int** src1, int** src2, int** dst, int len)
 			for(k = 0; k<len; k++){
 			
 			dst[i][j] += src1[i][k] * src2[k][j];
-		
+				
 			}
 		}
-
 	}
-
 }
+
+
 int mat_sub(int** src1, int** src2, int** dst, int len)
 {
 
@@ -184,10 +172,8 @@ int mat_sub(int** src1, int** src2, int** dst, int len)
 		
 			}
 		}
-
 	}
-
-}*/
+}
 
 
 

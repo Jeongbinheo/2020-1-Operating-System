@@ -34,18 +34,18 @@ int main(int argc, char** argv){
 	mat_mul(a,b,c,len);
 	stop = wtime();
 
-	//print_matrix(a, "A", len);
-	//print_matrix(b, "B", len);
-	//print_matrix(c, "C", len);
+	print_matrix(a, "A", len);
+	print_matrix(b, "B", len);
+	print_matrix(c, "C", len);
 	printf("Processing time : %f\n", (stop-start));
 		
 	start = wtime();
 	mat_mul_thread3(a,b,c,len,num_thread);
 	stop = wtime();
 
-//	print_matrix(a, "A", len);
-//	print_matrix(b, "B", len);
-//	print_matrix(c, "C", len);
+	print_matrix(a, "A", len);
+	print_matrix(b, "B", len);
+	print_matrix(c, "C", len);
 	printf("Processing time : %f\n", (stop-start));
 	return 0;
 	

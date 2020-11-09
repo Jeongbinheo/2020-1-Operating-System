@@ -79,7 +79,9 @@ Virtual Box에 사용한 Linux Image Spec
   }
   ```
 ## 3. Linux System Programming
- 
+ - [thread 생성 함수](README.md#thread-생성-함수)
+ - [thread에서 수행한 결과를 합치는 함수](README.md#thread-생성-함수
+ - [Octa-core에 최적화시키기 위한 전략](README.md#thread-생성-함수
  상위 2개의 함수들은 본인이 만든 mat_mul_thread3 함수를 실행시키면동작하는 함수들로 thread단위로 행렬 연산을 수행하고 thread 단위로 수행한 내용을 한번에 합치는 기능을 수행함.
  
 - ### thread 생성 함수

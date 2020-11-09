@@ -26,7 +26,7 @@ Virtual Box에 사용한 Linux Image Spec
 
 > ## 2.Matrix Multiplexing
 
-- mat_init 함수: 3개의 행렬을 생성하고 초기화 하는 함수 (main.c에 정의되어 있음)
+- **mat_init 함수**: 3개의 행렬을 생성하고 초기화 하는 함수 (main.c에 정의되어 있음)
  mat_init에는 A,B,C  세 개의 행렬을 이중 포인터 배열을 이용해 생성하고 
  생성된 A,B 행렬은 random number를 행렬의 배열에 채우고 
  C 행렬은 계산 결과가 들어가야 하므로 배열의 내부는 비워둔다.
@@ -56,7 +56,7 @@ Virtual Box에 사용한 Linux Image Spec
 
  <br/>
 
-- mat_mul 함수 : 행렬의 계산 기능을 담당하는 함수
+- **mat_mul 함수** : 행렬의 계산 기능을 담당하는 함수
 
   이중 배열 계산은 많은 코딩 수업에서 기초로 다루기 때문에 간단히 코드만으로 
   이해 하고 넘어갈 것!

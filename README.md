@@ -7,13 +7,13 @@ Multi-Core Computer에 최적화된 다중 Matrix Multiplexing을 위한 Linux S
 또한, 해당 과제는 교수님께서 전체적인 코딩과정을 보여주시면서 수업을 진행하신 내용에서 학생들 개개인의 Virtual Box의 image에 최적화된 코드로 변형하는 과제였습니다.
 ##
 > #  구성 (클릭시 해당 목차로 이동)
-1. [Virtual Box Spec](README.md#1.Virtual)
-2. [Matrix-Multiplexing](README.md#2)
-3. [Linux_System_Programming](README.md#3)
+1. [Virtual Box Spec](README.md#1.Virtual Box Spec)
+2. [Matrix-Multiplexing](README.md#2.Matrix-Multiplexing)
+3. [Linux System Programming](README.md#3.Linux System Programming)
   - thread 생성 함수
   - thread 당 multiplex 함수
   - main.c 에 대한 결과
- 4. [발표_동영상_링크](README.md#발표_동영상_링크)
+ 4. [발표 동영상 링크](README.md#4.발표 동영상 링크)
 
 ##
 > ## 1. Virtual Box Spec

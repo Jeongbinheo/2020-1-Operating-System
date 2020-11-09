@@ -121,10 +121,7 @@ Virtual Box에 사용한 Linux Image Spec
  기존에는 행의 갯수 만큼 thread를 생성했지만, 바뀐 전략에는  num_thread와 count라는 변수를 추가해서 num_thread 갯수를 직접 args자리에 입력하여 
  내가 원하는 수의 thread 만큼 생성하여 processor 갯수에 최적화된 연산이 가능해짐.
 
-
-
-
-    발표 동영상을 참조하면 수월하게 이해가 가능함.
+ 발표 동영상을 참조하면 수월하게 이해가 가능함.
 
 ## 4.  발표 동영상 링크
 

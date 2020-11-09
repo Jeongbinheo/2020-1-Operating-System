@@ -118,8 +118,8 @@ Virtual Box에 사용한 Linux Image Spec
 
  
 - ### Octa-core에 최적화 시키기 위한 전략
-  num_thread와 count라는 변수를 추가해서 기존에는
-  행의 갯수 만큼 thread를 생성했지만, 바뀐 전략에는 num_thread 갯수를 직접 받아와 내가 원하는 수의 thread 만큼 생성하여 processor 갯수에 최적화된 연산이 가능해짐.
+ 기존에는 행의 갯수 만큼 thread를 생성했지만, 바뀐 전략에는  num_thread와 count라는 변수를 추가해서 num_thread 갯수를 직접 args자리에 입력하여 
+ 내가 원하는 수의 thread 만큼 생성하여 processor 갯수에 최적화된 연산이 가능해짐.
 
 
 

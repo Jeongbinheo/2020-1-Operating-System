@@ -83,19 +83,19 @@ Virtual Box에 사용한 Linux Image Spec
  상위 2개의 함수들은 본인이 만든 mat_mul_thread3 함수를 실행시키면동작하는 함수들로 thread단위로 행렬 연산을 수행하고 thread 단위로 수행한 내용을 한번에 합치는 기능을 수행함.
  
 - ### thread 생성 함수
- ```c     
+```c     
   pthread_create 의 사용법 (Linux manual 참조) 
       #include <pthread.h>
 	     int pthread_create(pthread_t *thread, const pthread_attr_t * attr,
 		                   void *(*start_routine) (void *), void * arg);
-   ```    
+ ```    
    **→ void(*start_rotine)(void*) : thread를 만들고 실행하는 시점.**
   
    **→ 해당 프로젝트에는 mat_mul_th_kernel3이 들어가고,  thread별로 행렬 계산을 수행함.**
-    ```C
+  ```C
     Example)
     res = pthread_create(a_thread+i, NULL, mat_mul_th_kernel3, (void*)arg);
-   ```
+  ```
 
 - ### thread에서 수행한 결과를 합치는 함수 
    pthread_join : thread들이 terminated 될 때까지 기다려주는 함수.
@@ -105,8 +105,8 @@ Virtual Box에 사용한 Linux Image Spec
        int pthread_join(pthread_t *thread, void** retval);
   ```
   
-     **→ 프로젝트에서 사용되는 방식**
-   ```c
+    **→ 프로젝트에서 사용되는 방식**
+  ```c
  	for (i = 0; i<num_thread; i++){ //i(row)
 			res = pthread_join(a_thread[i], &thread_result);
 				if (res!=0){

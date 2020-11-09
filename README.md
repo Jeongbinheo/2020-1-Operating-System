@@ -8,7 +8,7 @@ Multi-Core Computer에 최적화된 다중 Matrix Multiplexing을 위한 Linux S
 ##
 > #  구성 (클릭시 해당 목차로 이동)
 1. [Virtual Box Spec](README.md#1-virtual-box-spec)
-2. [Matrix-Multiplexing](README.md#2.Matrix-Multiplexing)
+2. [Matrix-Multiplexing](README.md#2matrix-multiplexing)
 3. [Linux System Programming](README.md#3.Linux System Programming)
   - thread 생성 함수
   - thread 당 multiplex 함수

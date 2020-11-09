@@ -32,9 +32,9 @@ Virtual Box에 사용한 Linux Image Spec
  C 행렬은 계산 결과가 들어가야 하므로 배열의 내부는 비워둔다.
 
   간단히 코드를 살펴보면 다음과 같다.
-``` C
-void mat_init(int **(*p_a),int **(*p_b), int**(*p_c),int len)
-{
+ ``` C
+ void mat_init(int **(*p_a),int **(*p_b), int**(*p_c),int len)
+ {
 		int **a;
 		int **b;
 		int **c;
@@ -52,7 +52,7 @@ void mat_init(int **(*p_a),int **(*p_b), int**(*p_c),int len)
 		c[i] = (int*)malloc(len * sizeof(int*));
 	} 
 	  //for 문을 통해 이중 배열을 완전하게 만드는 과정
-```
+ ```
 
  <br/>
 

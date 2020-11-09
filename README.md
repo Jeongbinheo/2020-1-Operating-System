@@ -13,7 +13,7 @@ Multi-Core Computer에 최적화된 다중 Matrix Multiplexing을 위한 Linux S
   - thread 생성 함수
   - thread 당 multiplex 함수
   - main.c 에 대한 결과
- 4. [발표 동영상 링크](README.md#4--발표-동영상-링크
+ 4. [발표 동영상 링크](README.md#4--발표-동영상-링크)
 
 ##
 > ## 1. Virtual Box Spec
